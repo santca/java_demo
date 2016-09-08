@@ -4,7 +4,12 @@
 public class Test1 {
 
     public static void main(String[] args) {
-        System.out.println("hehe");
 
+        int i = 2;
+
+        System.out.println(Integer.toBinaryString(2));
+        System.out.println(Integer.toBinaryString(~2));
+
+        System.out.println(~2);
     }
 }
