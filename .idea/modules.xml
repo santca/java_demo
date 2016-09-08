@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo1.iml" filepath="$PROJECT_DIR$/.idea/modules/demo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo1_main.iml" group="demo1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo1_test.iml" group="demo1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo2.iml" filepath="$PROJECT_DIR$/.idea/modules/demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo2_main.iml" group="demo2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo2_test.iml" group="demo2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_demo.iml" filepath="$PROJECT_DIR$/.idea/java_demo.iml" />
     </modules>
   </component>
