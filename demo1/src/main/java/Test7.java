@@ -8,25 +8,25 @@ public class Test7 {
 
         // 奇数的输出
         int output_sum_1 = 0;
-        int output_product_1 = 0;
+        int output_product_1 = 1;
         int output_avg_1 = 0;
         int count_1 = 0;
 
         // 偶数的输出
         int output_sum_2 = 0;
-        int output_product_2 = 0;
+        int output_product_2 = 1;
         int output_avg_2 = 0;
         int count_2 = 0;
 
         // 质数的输出
         int output_sum_3 = 0;
-        int output_product_3 = 0;
+        int output_product_3 = 1;
         int output_avg_3 = 0;
         int count_3 = 0;
 
         // 合数的输出
         int output_sum_4 = 0;
-        int output_product_4 = 0;
+        int output_product_4 = 1;
         int output_avg_4 = 0;
         int count_4 = 0;
 
@@ -72,9 +72,9 @@ public class Test7 {
         }
 
         output_avg_1 = output_sum_1 / count_1;
-        output_avg_2 = output_avg_2 / count_2;
+        output_avg_2 = output_sum_2 / count_2;
         output_avg_3 = output_sum_3 / count_3;
-        output_avg_4 = output_avg_4 / count_4;
+        output_avg_4 = output_sum_4 / count_4;
 
         System.out.println("奇数:");
         System.out.println("和:"+output_sum_1);
