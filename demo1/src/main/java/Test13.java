@@ -10,7 +10,10 @@ public class Test13 {
         System.out.print("请输入一个数字:");
         int input_number = new Scanner(System.in).nextInt();
 
+        // 用来存储商
         int number_times = 0;
+
+        // 用来记录位数
         int index=0;
         while(true) {
             index ++;
