@@ -32,6 +32,14 @@ public class CustomerBiz {
         return false;
     }
 
+    public String changerOldName(String oldName, String newName) {
+
+        nameList = nameList.replaceAll(oldName,newName);
+
+        return nameList;
+    }
+
+
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
@@ -60,7 +68,7 @@ public class CustomerBiz {
 
         customerBiz.showName();
 
-        while (true) {
+        /*while (true) {
             System.out.print("请输入要查找的客户姓名:");
             String searchName = scanner.next();
 
@@ -87,9 +95,15 @@ public class CustomerBiz {
                 System.out.println("输入错误，请重新输入");
                 break;
             }
-        }
+        }*/
 
+        System.out.print("请输入老名字");
+        String oldName = scanner.next();
+        System.out.print("请输入新名字");
+        String neweName = scanner.next();
 
+        String result = customerBiz.changerOldName(oldName,neweName);
+        System.out.println("换后的结果是:"+result);
     }
 
 }
