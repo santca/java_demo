@@ -42,6 +42,9 @@ public class CustomerBiz {
 
     public static void main(String[] args){
 
+        SignPrint sp = new SignPrint();
+        sp.printSign(5,"*");
+
         Scanner scanner = new Scanner(System.in);
         CustomerBiz customerBiz = new CustomerBiz();
 
