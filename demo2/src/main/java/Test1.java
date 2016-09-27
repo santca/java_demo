@@ -11,5 +11,8 @@ public class Test1 {
         System.out.println(Integer.toBinaryString(~2));
 
         System.out.println(~2);
+
+        Animal al = new Dog();
+        al.eat();
     }
 }
