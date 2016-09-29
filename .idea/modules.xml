@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo3.iml" filepath="$PROJECT_DIR$/.idea/modules/demo3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo3_main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo3_main.iml" group="demo3" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo3_test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo3_test.iml" group="demo3" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo4.iml" filepath="$PROJECT_DIR$/.idea/modules/demo4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo4_main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo4_main.iml" group="demo4" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo4_test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo4_test.iml" group="demo4" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_demo.iml" filepath="$PROJECT_DIR$/.idea/java_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/test.iml" filepath="$PROJECT_DIR$/.idea/modules/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/test_main.iml" group="test" />
