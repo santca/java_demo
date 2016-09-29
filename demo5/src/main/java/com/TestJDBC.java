@@ -22,8 +22,8 @@ public class TestJDBC {
             sb.append("	id,name,sex,birthday,password       ");
             sb.append(" from                                ");
             sb.append("	user_                               ");
-            sb.append(" where                               ");
-            sb.append(" name = '王鑫'            ");
+            //sb.append(" where                               ");
+            //sb.append(" name = '王鑫'            ");
 
             Statement st = connection.createStatement();
             ResultSet rs  = st.executeQuery(sb.toString());
@@ -40,6 +40,5 @@ public class TestJDBC {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }
