@@ -27,6 +27,8 @@
       <module name="demo3_test" target="1.8" />
       <module name="demo4_main" target="1.8" />
       <module name="demo4_test" target="1.8" />
+      <module name="demo5_main" target="1.8" />
+      <module name="demo5_test" target="1.8" />
       <module name="test_main" target="1.8" />
       <module name="test_test" target="1.8" />
     </bytecodeTargetLevel>
