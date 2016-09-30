@@ -2,7 +2,8 @@ package com;
 
 
 import java.sql.*;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by chenyan on 2016/9/29.
@@ -11,47 +12,27 @@ public class TestJDBC {
 
     public static void main(String[] args) {
 
+        StringBuffer sb = new StringBuffer();
 
-        Connection connection = null;
-        Statement st = null;
-        ResultSet rs = null;
+        sb = new StringBuffer();
+        sb.append(" update user_								");
+        sb.append("	set name = 41, sex = 0  ");
+        sb.append(" where id = 3           ");
 
-        try {
+        DBUtils.modifyUser(sb.toString());
 
-            connection = DBUtils.getConnection();
 
-            StringBuffer sb = new StringBuffer();
-            sb.append(" select 								");
-            sb.append("	id,name,sex,birthday,password       ");
-            sb.append(" from                                ");
-            sb.append("	user_                               ");
-            //sb.append(" where                               ");
-            //sb.append(" name = '王鑫'            ");
+        sb = new StringBuffer();
+        sb.append(" select 								");
+        sb.append("	id,name,sex,birthday,password,description   ");
+        sb.append(" from                                ");
+        sb.append("	user_                               ");
+        sb.append(" where id = 3 ");
 
-            st = connection.createStatement();
-            rs = st.executeQuery(sb.toString());
+        List<Map<String,Object>> list = DBUtils.queryUserResult(sb.toString());
 
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                java.util.Date date = rs.getDate("birthday");
-
-                System.out.println(id + ":" + name + ":" + date);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-
-            try {
-                rs.close();
-                st.close();
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        for (Map<String,Object> map:list) {
+            System.out.println(map.toString());
         }
     }
-
-
 }
