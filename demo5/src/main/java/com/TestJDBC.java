@@ -1,6 +1,8 @@
 package com;
 
+
 import java.sql.*;
+import java.util.*;
 
 /**
  * Created by chenyan on 2016/9/29.
@@ -9,13 +11,14 @@ public class TestJDBC {
 
     public static void main(String[] args) {
 
-        String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://192.168.1.250:3306/reportdb?useUnicode=true&characterEncoding=utf-8&useSSL=false";
-        String username = "root";
-        String password = "admin";
+
+        Connection connection = null;
+        Statement st = null;
+        ResultSet rs = null;
+
         try {
-            Class.forName(driver);
-            Connection connection = DriverManager.getConnection(url,username,password);
+
+            connection = DBUtils.getConnection();
 
             StringBuffer sb = new StringBuffer();
             sb.append(" select 								");
@@ -25,20 +28,30 @@ public class TestJDBC {
             //sb.append(" where                               ");
             //sb.append(" name = '王鑫'            ");
 
-            Statement st = connection.createStatement();
-            ResultSet rs  = st.executeQuery(sb.toString());
+            st = connection.createStatement();
+            rs = st.executeQuery(sb.toString());
 
-            while(rs.next()) {
+            while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
+                java.util.Date date = rs.getDate("birthday");
 
-                System.out.println(id+":"+name);
+                System.out.println(id + ":" + name + ":" + date);
             }
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+
+            try {
+                rs.close();
+                st.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
+
+
 }
