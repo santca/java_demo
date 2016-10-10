@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/daily.iml" filepath="$PROJECT_DIR$/.idea/modules/daily.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/daily_main.iml" filepath="$PROJECT_DIR$/.idea/modules/daily_main.iml" group="daily" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/daily_test.iml" filepath="$PROJECT_DIR$/.idea/modules/daily_test.iml" group="daily" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo1.iml" filepath="$PROJECT_DIR$/.idea/modules/demo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo1_main.iml" group="demo1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo1_test.iml" group="demo1" />

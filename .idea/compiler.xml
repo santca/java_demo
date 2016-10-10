@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="daily_main" target="1.8" />
+      <module name="daily_test" target="1.8" />
       <module name="demo1_main" target="1.8" />
       <module name="demo1_test" target="1.8" />
       <module name="demo2_main" target="1.8" />
