@@ -1,14 +1,7 @@
 package com.feicuiedu;
 
-import com.feicuiedu.daily.pojo.User;
-import com.feicuiedu.daily.service.UserManager;
-import com.feicuiedu.daily.uitl.FileUtils;
+import com.feicuiedu.daily.controller.UserController;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -18,80 +11,58 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String filePath = "E:\\git_project\\feicui\\jinan\\java_demo\\daily\\src\\main\\resources";
-        String fileName = "welcome.txt";
-        String welComeStr = FileUtils.readFile(filePath,
-                fileName);
-        System.out.println(welComeStr);
         Scanner scanner = new Scanner(System.in);
+        UserController userController = new UserController(scanner);
 
-        int selected = scanner.nextInt();
+        String filePath = "E:\\git_project\\feicui\\jinan\\java_demo\\daily\\src\\main\\resources";
+
+        String fileName = "welcome.txt";
+
+        userController.showSelectItem(filePath, fileName);
+
+        int selected = userController.selectedItem();
+
+        boolean loginResult = false;
 
         if (1 == selected) {
+
             // 登录
-        } else {
+            loginResult = userController.login();
+        }
+        else {
+
             // 注册
+            userController.register();
+        }
 
-            System.out.println("请输入姓名");
-            String name = scanner.next();
+        // 登录成功后的操作
+        if (loginResult) {
 
-            System.out.println("请输入性别(0:女  1:男)");
-            int sex = scanner.nextInt();
+            fileName = "operate_item.txt";
 
-            System.out.println("请输入出入年月日(yyyy-MM-dd)");
-            String dateStr = scanner.next();
+            userController.showSelectItem(filePath, fileName);
 
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            Date birthday = null;
-            try {
-                birthday = sdf.parse(dateStr);
-            }
-            catch (ParseException e) {
-                e.printStackTrace();
-            }
-            String password = "";
-
-            String confirmPasswrod = "";
-
-            while (true) {
-
-                System.out.println("请输入密码");
-                password = scanner.next();
-
-                System.out.println("请输入确认密码");
-                confirmPasswrod = scanner.next();
-
-                if (password.equals(confirmPasswrod)) {
-                    break;
-                }
-            }
-
-            long id = System.currentTimeMillis();
-            User user = new User(name,
-                    sex,
-                    birthday,
-                    password,
-                    id);
-
-            UserManager userManager = new UserManager();
-            userManager.registerUser(user);
-
-            List<Map<String ,Object>> list = userManager.getAlluser();
-
-            System.out.println("目前系统所有的用户清单如下：");
-
-            for (Map<String,Object> map:list) {
+            selected = userController.selectedItem();
 
 
-                for (Map.Entry<String,Object> entry : map.entrySet()) {
-                    String key = entry.getKey();
-                    Object value = entry.getValue();
+        }
+        else {
 
-                    System.out.print(key+":"+value+",");
-                }
+        }
 
-                System.out.println();
-            }
+        switch (selected){
+            case 1:
+                // 查看日报
+                break;
+            case 2:
+                // 新增日报
+                break;
+            case 3:
+                // 退出
+                break;
+            default:
+                System.out.println("系统错误");
+                System.exit(-1);
         }
     }
 }

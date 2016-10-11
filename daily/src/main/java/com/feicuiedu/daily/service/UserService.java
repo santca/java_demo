@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by chenyan on 2016/10/10.
  */
-public class UserManager {
+public class UserService {
 
     public void registerUser(User user) {
 
@@ -30,6 +30,19 @@ public class UserManager {
 
 
         return list;
+    }
 
+    public boolean login(User user) {
+
+        String strSql = "select * from user_ where name = '"+user.getName()+"' and PASSWORD = '"+user.getPasswd()+"'" ;
+        List<Map<String,Object>> list = DBUtils.queryTable(strSql);
+
+        boolean result = true;
+        if (list == null || list.isEmpty()) {
+            // 登录失败
+            result = false;
+        }
+
+        return result;
     }
 }

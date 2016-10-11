@@ -19,6 +19,12 @@ public class User {
         this.id = id;
     }
 
+    public User(String name,
+                String passwd) {
+        this.name = name;
+        this.passwd = passwd;
+    }
+
     private String name;
 
     // 0:女  1:男
